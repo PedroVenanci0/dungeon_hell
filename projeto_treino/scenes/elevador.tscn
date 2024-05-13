@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://s86251gql357"]
+
+[ext_resource type="Texture2D" uid="uid://cs8xpuyte2guo" path="res://assets/sprites/ESTRUTURA/estrutura da dungeon/Final/Assets/Assets.png" id="1_dvn4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8uy1"]
+size = Vector2(53, 13)
+
+[node name="elevador" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.729248, 0)
+scale = Vector2(0.852211, 1)
+texture = ExtResource("1_dvn4t")
+region_enabled = true
+region_rect = Rect2(112.518, 95.4898, 64.0297, 15.5124)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_x8uy1")
