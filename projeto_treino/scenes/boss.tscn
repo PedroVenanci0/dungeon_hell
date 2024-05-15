@@ -416,4 +416,4 @@ animations = [{
 sprite_frames = SubResource("SpriteFrames_7mt67")
 animation = &"ataque"
 autoplay = "idle"
-frame_progress = 0.865036
+frame_progress = 0.0675724

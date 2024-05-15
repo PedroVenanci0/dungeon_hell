@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://b8etcd1muld4o"]
+[gd_scene load_steps=27 format=3 uid="uid://b8etcd1muld4o"]
 
 [ext_resource type="Texture2D" uid="uid://dei0topv3sgp2" path="res://assets/sprites/INIMIGOS/Skeleton/Attack.png" id="1_1va2m"]
+[ext_resource type="Script" path="res://scripts/esqueleto.gd" id="1_qb5vv"]
 [ext_resource type="Texture2D" uid="uid://bes66dsfah1yp" path="res://assets/sprites/INIMIGOS/Skeleton/Death.png" id="2_yosbn"]
 [ext_resource type="Texture2D" uid="uid://dhpdpp5bprcy0" path="res://assets/sprites/INIMIGOS/Skeleton/Idle.png" id="3_bf3a7"]
 [ext_resource type="Texture2D" uid="uid://b178k4vkv1wwb" path="res://assets/sprites/INIMIGOS/Skeleton/Walk.png" id="4_44m1m"]
@@ -169,6 +170,7 @@ animations = [{
 }]
 
 [node name="esqueleto" type="Node2D"]
+script = ExtResource("1_qb5vv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jya4u")

@@ -3,18 +3,21 @@ class_name Player
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
+var health = 100
 
 ## Estado do player atacando
 var is_ataque = false;
+
 ## Estado morto do jogador
 var died = false;
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var attack_sound = preload("res://assets/sounds/coin.wav")
 @onready var animated_sprite: AnimatedSprite2D = get_node("AnimatedSprite2D")
 @onready var audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
+@onready var camera_2d = $Camera2D
 
 func _physics_process(delta):
 			
@@ -79,7 +82,11 @@ func die():
 	animated_sprite.play("death")
 	await animated_sprite.animation_finished
 	
+func cam():
+	camera_2d.set_deferred("limit_bottom",0)
 	
+
+
 
 
 
